@@ -14,5 +14,7 @@ namespace AWSLab03.Data
         //It is used by Entity Framework to perform CRUD operations
         public DbSet<Podcast> Podcasts { get; set; }
         public DbSet<Episode> Episodes { get; set; }
+
+        public DbSet<Subscription> Subscriptions { get; set; }
     }
 }

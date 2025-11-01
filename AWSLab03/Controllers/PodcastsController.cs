@@ -120,5 +120,23 @@ namespace AWSLab03.Controllers
         {
             return _context.Podcasts.Any(e => e.PodcastID == id);
         }
+
+
+        // GET: Podcasts/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+                return NotFound();
+
+            var podcast = await _context.Podcasts
+                .Include(p => p.Subscriptions) // <-- make sure subscriptions are loaded
+                .FirstOrDefaultAsync(p => p.PodcastID == id);
+
+            if (podcast == null)
+                return NotFound();
+
+            return View(podcast);
+        }
+
     }
 }

@@ -36,6 +36,22 @@
         </dd>
     </dl>
 </div>
+<!-- SUBSCRIBE BUTTON START -->
+@if (User.Identity.IsAuthenticated)
+{
+    <form asp-controller="Subscriptions" asp-action="Subscribe" method="post">
+        <input type="hidden" name="podcastId" value="@Model.PodcastID" />
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+}
+<!-- SUBSCRIBE BUTTON END -->
+<h4>Subscribers:</h4>
+<ul>
+    @foreach (var sub in Model.Subscriptions ?? Enumerable.Empty<AWSLab03.Models.Subscription>())
+    {
+        <li>@sub.UserID</li>
+    }
+</ul>
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.PodcastID">Edit</a> |
     <a asp-action="Index">Back to List</a>

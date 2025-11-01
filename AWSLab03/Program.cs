@@ -1,8 +1,7 @@
 using AWSLab03.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Amazon.DynamoDBv2;
-using Amazon.Extensions.NETCore.Setup;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

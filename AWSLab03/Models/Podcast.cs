@@ -21,5 +21,13 @@ namespace AWSLab03.Models
 
         // Nullable collection prevents ModelState from requiring Episodes on create
         public virtual ICollection<Episode>? Episodes { get; set; }
+
+        public virtual ICollection<Subscription> Subscriptions { get; set; }
+        public Podcast()
+        {
+            Episodes = new HashSet<Episode>();
+            Subscriptions = new HashSet<Subscription>();
+        }
+
     }
 }
