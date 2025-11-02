@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AWSLab03")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49a277d9ee2fe574e32208dad7029402e8484887")]
 [assembly: System.Reflection.AssemblyProductAttribute("AWSLab03")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AWSLab03")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
